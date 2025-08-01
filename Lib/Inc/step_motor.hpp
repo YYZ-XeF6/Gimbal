@@ -53,8 +53,8 @@ private:
     uint16_t DR_PIN_;
     const float FREQUENCY_ = 1000000.0f;
     const uint16_t PRESCALER_ = 167;
-    const float MAX_SPEED_ = 720; // FREQUENCY_*step/(prescaler+1)/360.0f/2.0f
-    const float MIN_SPEED_ = 0.85; // FREQUENCY_*step/(prescaler+1)/360.0f/65535.0f
+    const float MAX_SPEED_ = 720.0f; // FREQUENCY_*step/(prescaler+1)/360.0f/2.0f
+    const float MIN_SPEED_ = 0.85f; // FREQUENCY_*step/(prescaler+1)/360.0f/65535.0f
 };
 
 extern StepMotorC gimbal_yaw;
