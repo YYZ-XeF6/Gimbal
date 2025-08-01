@@ -34,16 +34,14 @@
  *
  *
  */
-void Aiming(){
+#include "VelocitySolve.hpp"
 
-}
+float yaw_solving(float x, float y,float v,uint8_t stage){
+    float temp1 = (1/(x * x + y * y))*v;    //v maybe solid
 
-/*
- *      1. 根据当前位置和速度，得到角速度的理论值
- *      2. 根据底盘的调整，得到角速度的校正值
- *      3. 根据视野中的目标实际位置，得到角速度的PID值
- */
-
-void Tracking(){
-
+    if(stage == 1) return (temp1 * x);
+    else if(stage == 2) return (temp1 * y);
+    else if(stage == 3) return -(temp1 * x);
+    else if(stage == 4) return -(temp1 * y);
+    else return 0;
 }

@@ -9,6 +9,9 @@
 extern "C" {
 #endif
 
+#include "main.h"
+#include "math.h"
+
 #ifdef __cplusplus
 }
 #endif

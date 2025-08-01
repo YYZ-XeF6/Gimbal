@@ -12,8 +12,10 @@
 #include "main.h"
 #include "tim.h"
 
-#define L (-1)
-#define R (1)
+#define TURN_LEFT (-1)
+#define TURN_RIGHT (1)
+#define MAX_SPEED 720
+#define MIN_SPEED 0.85
 
 class StepMotorC
 {
@@ -35,7 +37,7 @@ public:
     float angle = 0;
     float angle_last = 0;
     float speed = 0;
-    int8_t direction = R;
+    int8_t direction = TURN_RIGHT;
     float target = 0;
     float step = 0.05625; // 360.0f / 200.0f / 32.0f
     uint16_t counter = 65535;

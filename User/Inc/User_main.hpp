@@ -38,9 +38,15 @@ extern "C" {
 #include "step_motor.hpp"
 #include "VelocitySolve.hpp"
 
+#include "perspective.hpp"
+#include "uart_io.hpp"
+
 
 void User_Init();
 void User_Loop();
+void Finding();
+void Tracking();
+float get_compensation(uint16_t diff);
 
 #ifdef __cplusplus
 }

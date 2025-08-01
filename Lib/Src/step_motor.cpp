@@ -46,8 +46,8 @@ void StepMotorC::Turn(int8_t dir)
 {
     if (dir == direction) { return; }
 
-    if (direction == L) { direction = R; }
-    else if (direction == R) { direction = L; }
+    if (direction == TURN_LEFT) { direction = TURN_RIGHT; }
+    else if (direction == TURN_RIGHT) { direction = TURN_LEFT; }
     HAL_GPIO_TogglePin(DR_PORT_, DR_PIN_);
 }
 
@@ -72,8 +72,8 @@ void StepMotorC::SetSpeed(float target_speed)
 void StepMotorC::MoveToTarget(float target_angle)
 {
     target = target_angle;
-    if (target < angle) { Turn(L); }
-    else if (target > angle) { Turn(R); }
+    if (target < angle) { Turn(TURN_LEFT); }
+    else if (target > angle) { Turn(TURN_RIGHT); }
 
     if (abs(target - angle) > step) { Start(); }
     else { Stop(); }
@@ -90,8 +90,8 @@ void StepMotorC::UpdateAngleCallback()
 {
     if (is_enable && is_start)
     {
-        if (direction == L) { angle -= step; }
-        else if (direction == R) { angle += step; }
+        if (direction == TURN_LEFT) { angle -= step; }
+        else if (direction == TURN_RIGHT) { angle += step; }
     }
     if (abs(target - angle) <= step) { Stop(); }
 }

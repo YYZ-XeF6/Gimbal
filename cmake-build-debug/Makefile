@@ -784,6 +784,30 @@ Lib/Src/SG90.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\YunTai.elf.dir\build.make CMakeFiles/YunTai.elf.dir/Lib/Src/SG90.c.s
 .PHONY : Lib/Src/SG90.c.s
 
+Lib/Src/perspective.obj: Lib/Src/perspective.cpp.obj
+.PHONY : Lib/Src/perspective.obj
+
+# target to build an object file
+Lib/Src/perspective.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\YunTai.elf.dir\build.make CMakeFiles/YunTai.elf.dir/Lib/Src/perspective.cpp.obj
+.PHONY : Lib/Src/perspective.cpp.obj
+
+Lib/Src/perspective.i: Lib/Src/perspective.cpp.i
+.PHONY : Lib/Src/perspective.i
+
+# target to preprocess a source file
+Lib/Src/perspective.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\YunTai.elf.dir\build.make CMakeFiles/YunTai.elf.dir/Lib/Src/perspective.cpp.i
+.PHONY : Lib/Src/perspective.cpp.i
+
+Lib/Src/perspective.s: Lib/Src/perspective.cpp.s
+.PHONY : Lib/Src/perspective.s
+
+# target to generate assembly for a file
+Lib/Src/perspective.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\YunTai.elf.dir\build.make CMakeFiles/YunTai.elf.dir/Lib/Src/perspective.cpp.s
+.PHONY : Lib/Src/perspective.cpp.s
+
 Lib/Src/step_motor.obj: Lib/Src/step_motor.cpp.obj
 .PHONY : Lib/Src/step_motor.obj
 
@@ -807,6 +831,30 @@ Lib/Src/step_motor.s: Lib/Src/step_motor.cpp.s
 Lib/Src/step_motor.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\YunTai.elf.dir\build.make CMakeFiles/YunTai.elf.dir/Lib/Src/step_motor.cpp.s
 .PHONY : Lib/Src/step_motor.cpp.s
+
+Lib/Src/uart_io.obj: Lib/Src/uart_io.cpp.obj
+.PHONY : Lib/Src/uart_io.obj
+
+# target to build an object file
+Lib/Src/uart_io.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\YunTai.elf.dir\build.make CMakeFiles/YunTai.elf.dir/Lib/Src/uart_io.cpp.obj
+.PHONY : Lib/Src/uart_io.cpp.obj
+
+Lib/Src/uart_io.i: Lib/Src/uart_io.cpp.i
+.PHONY : Lib/Src/uart_io.i
+
+# target to preprocess a source file
+Lib/Src/uart_io.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\YunTai.elf.dir\build.make CMakeFiles/YunTai.elf.dir/Lib/Src/uart_io.cpp.i
+.PHONY : Lib/Src/uart_io.cpp.i
+
+Lib/Src/uart_io.s: Lib/Src/uart_io.cpp.s
+.PHONY : Lib/Src/uart_io.s
+
+# target to generate assembly for a file
+Lib/Src/uart_io.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\YunTai.elf.dir\build.make CMakeFiles/YunTai.elf.dir/Lib/Src/uart_io.cpp.s
+.PHONY : Lib/Src/uart_io.cpp.s
 
 User/Src/Usart.obj: User/Src/Usart.cpp.obj
 .PHONY : User/Src/Usart.obj
@@ -971,9 +1019,15 @@ help:
 	@echo ... Lib/Src/SG90.obj
 	@echo ... Lib/Src/SG90.i
 	@echo ... Lib/Src/SG90.s
+	@echo ... Lib/Src/perspective.obj
+	@echo ... Lib/Src/perspective.i
+	@echo ... Lib/Src/perspective.s
 	@echo ... Lib/Src/step_motor.obj
 	@echo ... Lib/Src/step_motor.i
 	@echo ... Lib/Src/step_motor.s
+	@echo ... Lib/Src/uart_io.obj
+	@echo ... Lib/Src/uart_io.i
+	@echo ... Lib/Src/uart_io.s
 	@echo ... User/Src/Usart.obj
 	@echo ... User/Src/Usart.i
 	@echo ... User/Src/Usart.s

@@ -26,3 +26,10 @@ void LED_G_OFF(){
 void LED_B_OFF(){
     HAL_GPIO_WritePin(LED_B_GPIO_Port,LED_B_Pin,GPIO_PIN_RESET);
 }
+
+void Layser_On(){
+    HAL_GPIO_WritePin(Layser_GPIO_Port,Layser_Pin,GPIO_PIN_SET);
+}
+void  Layser_Off(){
+    HAL_GPIO_WritePin(Layser_GPIO_Port, Layser_Pin,GPIO_PIN_RESET);
+}
