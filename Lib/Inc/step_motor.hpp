@@ -40,7 +40,7 @@ public:
     int8_t direction = TURN_RIGHT;
     float target = 0;
     float step = 0.05625; // 360.0f / 200.0f / 32.0f
-    uint16_t counter = 65535;
+    uint16_t period = 65535;
     bool is_enable = false;
     bool is_start = false;
 

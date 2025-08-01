@@ -63,10 +63,11 @@ void StepMotorC::SetSpeed(float target_speed)
     }
     if (speed > MAX_SPEED_) { speed = MAX_SPEED_; }
     if (speed < MIN_SPEED_) { speed = MIN_SPEED_; }
-//    counter = (uint16_t)(FREQUENCY_ * step / 360.0f / speed);
-    counter = (uint16_t)(FREQUENCY_ * step / speed);
-    __HAL_TIM_SET_COUNTER(htim_, counter);
-    __HAL_TIM_SET_COMPARE(htim_, TIM_CHANNEL_, counter/2);
+    // period = (uint16_t)(FREQUENCY_ * step / 360.0f / speed);
+    period = (uint16_t)(FREQUENCY_ * step / speed);
+    __HAL_TIM_SET_AUTORELOAD(htim_, period);
+    __HAL_TIM_SET_COMPARE(htim_, TIM_CHANNEL_, period/2);
+    Start();
 }
 
 void StepMotorC::MoveToTarget(float target_angle)
@@ -93,7 +94,7 @@ void StepMotorC::UpdateAngleCallback()
         if (direction == TURN_LEFT) { angle -= step; }
         else if (direction == TURN_RIGHT) { angle += step; }
     }
-    if (abs(target - angle) <= step) { Stop(); }
+    // if (abs(target - angle) <= step) { Stop(); }
 }
 
 StepMotorC gimbal_yaw(&htim1, TIM_CHANNEL_4,DIRECTION_1_GPIO_Port, DIRECTION_1_Pin,

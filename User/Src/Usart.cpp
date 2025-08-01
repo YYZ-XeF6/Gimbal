@@ -60,3 +60,25 @@ void USART_ReceiveCallback(UART_HandleTypeDef *huart) {
         }
     }
 }
+
+
+uint8_t rx_buf[16];
+void usart_dma_init()
+{
+    HAL_UART_Receive_DMA(&huart1, rx_buf, 8);
+}
+
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
+{
+    UnpackData(rx_buf, sizeof(rx_buf), NULL);
+    usart_dma_init();
+}
+
+
+
+
+
+
+
+
+
