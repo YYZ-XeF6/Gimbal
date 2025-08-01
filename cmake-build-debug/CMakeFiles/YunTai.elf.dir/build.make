@@ -618,6 +618,7 @@ YunTai.elf: CMakeFiles/YunTai.elf.dir/User/Src/Usart.cpp.obj
 YunTai.elf: CMakeFiles/YunTai.elf.dir/User/Src/User_main.cpp.obj
 YunTai.elf: CMakeFiles/YunTai.elf.dir/User/Src/VelocitySolve.cpp.obj
 YunTai.elf: CMakeFiles/YunTai.elf.dir/build.make
+YunTai.elf: E:/RM_Hardware_Project/YunTai/Lib/Lib/libarm_cortexM4lf_math.a
 YunTai.elf: CMakeFiles/YunTai.elf.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=E:\RM_Hardware_Project\YunTai\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Linking CXX executable YunTai.elf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\YunTai.elf.dir\link.txt --verbose=$(VERBOSE)

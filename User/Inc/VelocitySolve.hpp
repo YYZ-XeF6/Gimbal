@@ -12,6 +12,8 @@ extern "C" {
 #include "main.h"
 #include "math.h"
 
+float yaw_solving(float x, float y,uint8_t stage);
+
 #ifdef __cplusplus
 }
 #endif

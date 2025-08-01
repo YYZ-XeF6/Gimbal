@@ -47,6 +47,7 @@ void User_Loop();
 void Finding();
 void Tracking();
 float get_compensation(uint16_t diff);
+void Aiming();
 
 #ifdef __cplusplus
 }
