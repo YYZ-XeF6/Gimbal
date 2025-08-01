@@ -9,8 +9,8 @@ void User_Init(){
 
 //    HAL_TIM_PWM_Start(&htim1,TIM_CHANNEL_4);
 //    HAL_TIM_PWM_Start(&htim3,TIM_CHANNEL_1);
-    gimbal_pitch.Start();
-    gimbal_yaw.Start();
+    // gimbal_pitch.Start();
+    // gimbal_yaw.Start();
 
     HAL_TIM_PWM_Start(&htim8,TIM_CHANNEL_2);
 
